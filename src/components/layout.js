@@ -7,6 +7,7 @@
 
 import * as React from "react"
 import Navigation from "./navigation"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
       <main className="container mx-auto ">
         <div>{children}</div>
       </main>
+      <Footer />
     </>
   )
 }

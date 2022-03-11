@@ -1,5 +1,5 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React, { Suspense, lazy } from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
@@ -34,13 +34,19 @@ const Home = () => {
     <Layout>
       <Seo title="Domovská stránka" />
       <Header title="Přinutím tě si vzpomenout" />
-      {/* prettier-ignore */}
       <div className="grid grid-cols-1 gap-1 md:grid-cols-3 lg:grid-cols-6 ">
         {allImages.map((src, idx) => (
-          <img className={idx % 2 ? "mt-0 lg:h-72 md:mt-10 md:w-full lozad" : "mb-0 md:h-72 md:w-full lg:mb-10 lozad" }
-            src={src}
-            alt="married couples images"
-          />
+          <div key={`image-${idx}`}>
+            <img
+              className={
+                idx % 2
+                  ? "mt-0 md:max-h-72 md:w-full lg:mt-10"
+                  : "mb-0 md:max-h-72 md:w-full lg:mb-10"
+              }
+              src={src}
+              alt="married couples images"
+            />
+          </div>
         ))}
       </div>
       <Article
