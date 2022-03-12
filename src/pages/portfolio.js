@@ -8,7 +8,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <Header title="Moja práce" subTitle="..atd" />
-      <Suspense fallback={<div>...loading</div>}>
+      <Suspense fallback={<div className="font-light">...Načítám</div>}>
         <ImageView />
       </Suspense>
       <div className="my-6 text-center">
