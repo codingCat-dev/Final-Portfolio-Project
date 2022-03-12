@@ -1,17 +1,13 @@
 import * as React from "react"
-const Article = ({ title, subTitle, quote, subQuote, quoteBold }) => {
-  return (
-    <article className="text-center my-8 mx-auto px-2 lg:w-1/2 lg:px-0 lg:my-24">
-      <h2 className="my-4 block uppercase font-noto font-bold text-xl tracking-wider  lg:text-5xl ">
-        {title}
-      </h2>
-      <div className="my-4 font-light">
-        <p className="my-4 uppercase text-left bg-red-200">{subTitle}</p>
-        <p className="my-4">{quote}</p>
-        <p className="uppercase">{subQuote}</p>
-        <p className="font-normal uppercase">{quoteBold}</p>
-      </div>
-    </article>
-  )
-}
+
+const Article = ({ title, quote, subQuote }) => (
+  <article className="font-light">
+    <h2 className="uppercase text-sm font-noto mb-6 lg:text-xl lg:tracking-wide">
+      {title}
+    </h2>
+    <p className="my-2 md:my-3">{quote}</p>
+    <p className="my-2 md:my-3">{subQuote}</p>
+  </article>
+)
+
 export default Article

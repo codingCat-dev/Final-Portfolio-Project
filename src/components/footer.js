@@ -2,7 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 const Footer = () => {
   return (
-    <footer className="pt-6 font-light bg-blue-50 text-center   lg:pt-12">
+    <footer className="pt-6 font-light bg-blue-50 text-center lg:pt-12">
       <div
         className="text-sm tracking-tighter"
         role="navigation"
@@ -51,13 +51,13 @@ const Footer = () => {
       >
         <ul className="flex items-center justify-evenly flex-col lg:flex-row">
           <li>
-            <Link to="../privacypolicy">Právní varování</Link>
+            <Link to="/privacy">Právní varování</Link>
           </li>
           <li>
-            <Link to="../privacypolicy">Zásady ochrany osobních údajů</Link>
+            <Link to="/privacy">Zásady ochrany osobních údajů</Link>
           </li>
           <li>
-            <Link to="../privacypolicy">Zásady cookies</Link>
+            <Link to="/privacy">Zásady cookies</Link>
           </li>
         </ul>
       </div>

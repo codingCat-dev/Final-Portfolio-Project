@@ -13,9 +13,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navigation />
-      <main className="container mx-auto ">
-        <div>{children}</div>
-      </main>
+      <div className="mt-36"></div>
+      <main className="container mx-auto">{children}</main>
       <Footer />
     </>
   )

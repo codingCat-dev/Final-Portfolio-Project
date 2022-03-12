@@ -7,21 +7,20 @@ const links = [
   { name: "O mně", path: "../about" },
   { name: "Portfolio", path: "../portfolio" },
   { name: "Kontakt", path: "../contact" },
-  // Poznej mne
 ]
 
 const Navigation = () => (
-  <nav className="px-2 pt-2 pb-1  text-center text-sm font-light tracking-wide ">
+  <nav className="flex justify-between items-center flex-col fixed top-0 w-full bg-white z-20 text-xs uppercase font-light py-1 opacity-95 shadow-sm">
     <StaticImage
       alt="website logo AR"
       src="../images/logo/logo.png"
-      width={100}
+      width={50}
       loading="lazy"
     />
-    <ul className="flex justify-center items-center flex-wrap">
+    <ul className="flex justify-center flex-wrap items-center mt-2 md:justify-evenly">
       {links.map(link => (
-        <li key={link.name} className="my-1 mx-1 lg:mx-4">
-          <Link to={link.path} activeClassName="border-b-4 border-blue-50">
+        <li key={link.name} className="m-2 lg:m-0">
+          <Link to={link.path} className=" py-1 md:px-6" activeClassName="">
             {link.name}
           </Link>
         </li>
