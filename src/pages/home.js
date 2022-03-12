@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Header from "../components/header"
 
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -18,6 +18,7 @@ const Home = () => {
       ) {
         edges {
           node {
+            base
             childImageSharp {
               gatsbyImageData
             }
@@ -26,11 +27,6 @@ const Home = () => {
       }
     }
   `)
-
-  const allImages = data.allFile.edges.map(
-    ({ node }) => node.childImageSharp.gatsbyImageData.images.fallback.src
-  )
-
   return (
     <Layout>
       <Seo title="Domovská stránka" />
@@ -48,7 +44,19 @@ const Home = () => {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-1 md:grid-cols-3 md:my-16 lg:grid-cols-6 ">
-        {allImages.map((src, idx) => (
+        {data.allFile.edges.map(({ node: image }, idx) => (
+          <GatsbyImage
+            alt=""
+            key={image.base}
+            image={image.childImageSharp.gatsbyImageData}
+            className={
+              idx % 2
+                ? "mt-0 md:max-h-72 md:w-full lg:mt-10"
+                : "mb-0 md:max-h-72 md:w-full lg:mb-10"
+            }
+          />
+        ))}
+        {/* {allImages.map((src, idx) => (
           <div key={`image-${idx}`}>
             <img
               className={
@@ -60,7 +68,7 @@ const Home = () => {
               alt="married couples images"
             />
           </div>
-        ))}
+        ))} */}
       </div>
     </Layout>
   )

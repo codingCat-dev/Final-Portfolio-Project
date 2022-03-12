@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 const Privacy = () => {
   return (
-    <div className="text-center mt-12 px-2">
+    <div className="text-center mt-12 px-2 mx-auto w-2/3">
       <Article
         title="pravni varovani"
         quote="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem

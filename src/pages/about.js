@@ -16,21 +16,22 @@ const About = () => {
           <Article
             title="Jsem fotografka v Ostravě, a všude tam, kde jsou k vyprávění krásné
             příběhy..."
-            quote="Mým posláním je být po vašem boku od začátku do konce a nechat vše plynout. Užijete si mnoho výjimečných okamžiků se svými hosty a přáteli, a profesionální práci nechte na mně..."
+            quote="Mým posláním je být po vašem boku od začátku do konce a nechat vše plynout. Užijete si mnoho výjimečných okamžiků se svými hosty a přáteli, a práci nechte na mně..."
+            subQuote="Specializuji se na svatby, firemní večírky,maturitní plesy, a portrétové fotografie"
           />
           <div className="my-6" />
           <Article
             title="Čím a Kde Fotím"
-            quote="sit amet consectetur adipectus placeat facere. Aspernatur, placeat"
+            quote="Disponují vlastním ateliérem v centru Ostravy, a profesionálním vybavením canon."
           />
 
-          <div className="my-6">
+          <div className="mt-12 mb-6">
             <Link to="/contact" className="px-6 py-1  border border-black">
               Pracujme spolu
             </Link>
           </div>
         </div>
-        <div className="mx-auto lg:w-3/4">
+        <div className="mx-auto ">
           <StaticImage src="../images/me/me.jpg" alt="hi" className="" />
         </div>
       </div>
