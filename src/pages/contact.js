@@ -1,26 +1,21 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Header from "../components/header"
 import Article from "../components/article"
 import Form from "../components/form"
-
+// prettier-ignore
 const Contact = () => {
   return (
     <Layout>
+      <Seo title='Kontakt'/>
       <Header title="Promluvme si" />
       <div className="text-center my-8 px-2 lg:px-0 lg:my-16">
         <div className="font-light">
-          <a
-            href="mailto:mail@mail.com"
-            className="block tracking-wide lg:text-xl"
-          >
+          <a href="mailto:mail@mail.com" className="block tracking-wide lg:text-xl" target="_blank" rel="noreferrer">
             emailmeatthisemail@email.com
           </a>
-          <a
-            href="https://wa.me/15551234567"
-            className="block tracking-wide lg:text-xl mt-4 text-gray-500"
-          >
+          <a href="https://wa.me/15551234567" className="block tracking-wide lg:text-xl mt-4 text-gray-500" target="_blank" rel="noreferrer">
             + 420 222/222-222
           </a>
         </div>

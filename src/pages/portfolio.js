@@ -4,6 +4,7 @@ import Header from "../components/header"
 import { Link } from "gatsby"
 
 const ImageView = lazy(() => import("../components/imageView"))
+
 const Portfolio = () => {
   return (
     <Layout>

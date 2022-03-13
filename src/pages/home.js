@@ -1,11 +1,15 @@
-import React from "react"
+import React, { lazy, Suspense } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Header from "../components/header"
+import Article from "../components/article"
 
 import { GatsbyImage } from "gatsby-plugin-image"
+
+const LatestWork = lazy(() => import("../components/latestwork"))
+const NiceWords = lazy(() => import("../components/nicewords"))
 
 const Home = () => {
   const data = useStaticQuery(graphql`
@@ -43,7 +47,7 @@ const Home = () => {
           <span className="font-normal">&nbsp;to je život</span>
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-1 md:grid-cols-3 md:my-16 lg:grid-cols-6 ">
+      <div className="grid grid-cols-1 gap-1 md:grid-cols-3 md:mt-16 mb-8 lg:grid-cols-6 ">
         {data.allFile.edges.map(({ node: image }, idx) => (
           <GatsbyImage
             alt=""
@@ -56,20 +60,42 @@ const Home = () => {
             }
           />
         ))}
-        {/* {allImages.map((src, idx) => (
-          <div key={`image-${idx}`}>
-            <img
-              className={
-                idx % 2
-                  ? "mt-0 md:max-h-72 md:w-full lg:mt-10"
-                  : "mb-0 md:max-h-72 md:w-full lg:mb-10"
-              }
-              src={src}
-              alt="married couples images"
+      </div>
+      <div className="py-2 text-center  ">
+        <Header subTitle="Co Vám mohu nabídnout?" />
+        <div className="grid grid-cols-3 gap-2 mt-12">
+          <div>
+            <Article
+              title="Svatební fotografie"
+              quote="
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Consequatur facere culpa temporibus tenetur ducimus inventore."
             />
           </div>
-        ))} */}
+          <div>
+            <Article
+              title="Rodinná sezení"
+              quote="
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Consequatur facere culpa temporibus tenetur ducimus inventore."
+            />
+          </div>
+          <div>
+            <Article
+              title="Portrétové fotografie"
+              quote="
+             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Consequatur facere culpa temporibus tenetur ducimus inventore."
+            />
+          </div>
+        </div>
       </div>
+      <Suspense fallback={<div className="font-light">...Načítám</div>}>
+        <LatestWork />
+      </Suspense>
+      <Suspense fallback={<div className="font-light">...Načítám</div>}>
+        <NiceWords />
+      </Suspense>
     </Layout>
   )
 }

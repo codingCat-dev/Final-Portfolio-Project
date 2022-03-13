@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
         <div className="mx-auto ">
-          <StaticImage src="../images/me/me.jpg" alt="hi" className="" />
+          <StaticImage src="../images/me/me2.jpg" alt="hi" className="" />
         </div>
       </div>
 

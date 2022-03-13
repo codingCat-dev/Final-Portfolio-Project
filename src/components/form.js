@@ -14,7 +14,7 @@ const Form = () => {
       <form onSubmit={onSubmit} className="text-center">
         <div className=" border-t-2 border-gray-50 my-12 " />
         <div className="my-6 mx-auto px-2 lg:w-2/3 font-light">
-          <label className="block my-2">
+          <label htmlFor="firstname" className="block my-2">
             Začneme tím prvním, jak se jmenuješ? &nbsp;
             <small className="block text-gray-500">Požadované</small>
           </label>
@@ -28,7 +28,7 @@ const Form = () => {
           />
         </div>
         <div className=" my-6 mx-auto px-2 lg:w-2/3 font-light">
-          <label className="block my-2">
+          <label htmlFor="eventdate" className="block my-2">
             Jaký den je vaše událost? &nbsp;
             <small className="block text-gray-500">Požadované</small>
           </label>
@@ -42,7 +42,7 @@ const Form = () => {
           />
         </div>
         <div className=" my-6 mx-auto px-2 lg:w-2/3 font-light">
-          <label className="block my-2">
+          <label htmlFor="eventplace" className="block my-2">
             Kde se bude konat událost ? &nbsp;
             <small className="block text-gray-500">Požadované</small>
           </label>
@@ -56,12 +56,12 @@ const Form = () => {
           />
         </div>
         <div className=" my-6 mx-auto px-2 lg:w-2/3 font-light">
-          <label className="block my-2">
-            Řekni mi něco o své události a co si myslíš, že bych měl vědět
+          <label htmlFor="eventinformation" className="block my-2">
+            Řekni mi něco o své události a co si myslíš, že bych měla vědět
             &nbsp;<small className="block text-gray-500">Požadované</small>
           </label>
           <input
-            className="appearance-none block w-full  bg-blue-50  font-light py-3 px-4  leading-tight focus:outline-none focus:bg-gray-50"
+            className="appearance-none block w-full bg-blue-50  font-light py-3 px-4  leading-tight focus:outline-none focus:bg-gray-50"
             type="text"
             required
             name="eventinformation"
@@ -74,7 +74,7 @@ const Form = () => {
           </small>
         </div>
         <div className=" my-6 mx-auto px-2 lg:w-2/3 font-light">
-          <label className="block my-2">
+          <label htmlFor="email" className="block my-2">
             Na jaký e-mail vám mohu zaslat všechny informace &nbsp;
             <small className="block text-gray-500">Požadované</small>
           </label>
@@ -88,8 +88,8 @@ const Form = () => {
           />
         </div>
         <div className=" my-6 mx-auto px-2 lg:w-2/3 font-light">
-          <label className="block my-2">
-            Můžete mi nechat telefonní číslo &nbsp;
+          <label htmlFor="phone" className="block my-2">
+            Můžete mi nechat telefonní číslo ?&nbsp;
             <small className="block text-gray-500">Požadované</small>
           </label>
           <input
@@ -102,7 +102,7 @@ const Form = () => {
           />
         </div>
         <div className=" my-6 mx-auto px-2 lg:w-2/3 font-light">
-          <label className="block my-2">
+          <label htmlFor="memories" className="block my-2">
             A od 1 do 10, jakou hodnotu pro vás mají vzpomínky &nbsp;
             <small className="block text-gray-500">Požadované</small>
           </label>
