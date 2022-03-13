@@ -34,7 +34,6 @@ const Home = () => {
   return (
     <Layout>
       <Seo title="Domovská stránka" />
-
       <Header title="Přinutím tě si vzpomenout" />
       <div className="mt-8 text-center font-light px-2 mx-auto lg:w-2/3">
         <p className="my-4 ">
@@ -61,7 +60,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <div className="py-2 text-center  ">
+      <div className="py-2 text-center">
         <Header subTitle="Co Vám mohu nabídnout?" />
         <div className="grid grid-cols-3 gap-2 mt-12">
           <div>

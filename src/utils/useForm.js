@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import { useState } from "react"
 
-const useForm = submitCallback => {
+const useForm = () => {
   const [state, setState] = useState({})
 
   const onChange = ev => {

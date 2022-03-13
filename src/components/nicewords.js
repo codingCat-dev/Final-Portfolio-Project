@@ -5,7 +5,7 @@ import Header from "./header"
 const NiceWords = () => (
   <>
     <Header subTitle="Hezka Slova" />
-    <div className=" text-center h-44">
+    <div className=" text-center h-40">
       <div className="mt-8 font-light">
         <Testimonial timer={100}>
           <div>

@@ -6,15 +6,16 @@ import Article from "./article"
 
 const LatestWork = () => {
   return (
-    <div className="py-4 mt-12 mb-12 text-center  ">
+    <div className="py-4 mb-12 text-center  ">
       <Header subTitle="Poslední práce" />
-      <div className="grid grid-cols-3 gap-2 mt-12">
-        <div>
+      <div className="grid grid-cols-3 gap-4 mt-8">
+        <div className="h-72">
           <StaticImage
             alt="hi"
             src="../images/moments/moment4.jpg"
-            height={500}
+            className="h-72 w-full"
           />
+
           <div className="my-4">
             <Article title="Svatba Jacka a Alisson" />
           </div>
@@ -23,8 +24,9 @@ const LatestWork = () => {
           <StaticImage
             alt="hi"
             src="../images/moments/momen3.jpg"
-            height={500}
+            className="h-72 w-full"
           />
+
           <div className="my-4">
             <Article title="Svatba Brambore a honzy v kostajnici" />
           </div>
@@ -33,12 +35,21 @@ const LatestWork = () => {
           <StaticImage
             alt="hi"
             src="../images/moments/moment7.jpg"
-            height={500}
+            className="h-72 w-full"
           />
+
           <div className="my-4">
             <Article title="Svatba Marka a Julie" />
           </div>
         </div>
+      </div>
+      <div className="my-4">
+        <Link
+          className="px-6 py-2  border border-black uppercase"
+          to="/portfolio"
+        >
+          Kompletni Portfolio
+        </Link>
       </div>
     </div>
   )
