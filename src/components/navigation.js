@@ -10,7 +10,7 @@ const links = [
 ]
 
 const Navigation = () => (
-  <nav className="flex justify-between items-center flex-col fixed top-0 w-full bg-white z-20 text-xs uppercase font-light py-1 opacity-95 shadow-sm">
+  <nav className="flex justify-between items-center flex-col fixed top-0 w-full z-20  text-slate-800 uppercase text-xs   font-extralight py-1 opacity-95 bg-white">
     <StaticImage
       alt="website logo AR"
       src="../images/logo/logo.png"
