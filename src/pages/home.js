@@ -1,12 +1,11 @@
 import React, { lazy, Suspense } from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
 import Layout from "../components/layout"
 import Header from "../components/header"
 import Article from "../components/article"
-
-import { GatsbyImage } from "gatsby-plugin-image"
 
 const LatestWork = lazy(() => import("../components/latestwork"))
 const NiceWords = lazy(() => import("../components/nicewords"))
