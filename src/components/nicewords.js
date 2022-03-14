@@ -5,8 +5,8 @@ import Header from "./header"
 const NiceWords = () => (
   <>
     <Header subTitle="Hezka Slova" />
-    <div className=" text-center h-40">
-      <div className="mt-8 font-light">
+    <div className="h-48 py-4 mt-6 text-center text-gray-100 bg-gradient-to-l from-gray-800 via-gray-900 to-black">
+      <div className="mt-8 font-light ">
         <Testimonial timer={100}>
           <div>
             <p className="w-3/4 mx-auto">
@@ -15,7 +15,7 @@ const NiceWords = () => (
               scratching moments. He has been a real asset to the team and to me
               personally.
             </p>
-            <p className="uppercase font-normal mt-8 font-noto">
+            <p className="mt-8 font-normal uppercase font-noto">
               Jack <span className="text-blue-500">&</span> Alisson
             </p>
           </div>
@@ -26,7 +26,7 @@ const NiceWords = () => (
               development and is a team player with an excellent attitude both
               in and outside of work.
             </p>
-            <p className="uppercase font-normal mt-8 font-noto">
+            <p className="mt-8 font-normal uppercase font-noto">
               Honza <span className="text-blue-500">&</span> Brambora
             </p>
           </div>
@@ -37,7 +37,7 @@ const NiceWords = () => (
               development and is a team player with an excellent attitude both
               in and outside of work.
             </p>
-            <p className="uppercase font-normal mt-8 font-noto">
+            <p className="mt-8 font-normal uppercase font-noto">
               Mark <span className="text-blue-500">&</span> Julie
             </p>
           </div>

@@ -6,14 +6,14 @@ import Article from "./article"
 
 const LatestWork = () => {
   return (
-    <div className="py-4 mb-12 text-center  ">
+    <div className="py-4 my-12 text-center ">
       <Header subTitle="Poslední práce" />
       <div className="grid grid-cols-3 gap-4 mt-8">
         <div className="h-72">
           <StaticImage
             alt="hi"
             src="../images/moments/moment4.jpg"
-            className="h-72 w-full"
+            className="w-full h-72"
           />
 
           <div className="my-4">
@@ -24,7 +24,7 @@ const LatestWork = () => {
           <StaticImage
             alt="hi"
             src="../images/moments/momen3.jpg"
-            className="h-72 w-full"
+            className="w-full h-72"
           />
 
           <div className="my-4">
@@ -35,7 +35,7 @@ const LatestWork = () => {
           <StaticImage
             alt="hi"
             src="../images/moments/moment7.jpg"
-            className="h-72 w-full"
+            className="w-full h-72"
           />
 
           <div className="my-4">
@@ -45,7 +45,7 @@ const LatestWork = () => {
       </div>
       <div className="my-4">
         <Link
-          className="px-6 py-2  border border-black uppercase"
+          className="px-6 py-2 uppercase border border-black"
           to="/portfolio"
         >
           Kompletni Portfolio
