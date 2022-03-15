@@ -13,7 +13,11 @@ const useForm = () => {
     }))
   }
 
-  return [state, onChange]
+  const onSubmit = ev => {
+    ev.preventDefault()
+  }
+
+  return [state, onChange, onSubmit]
 }
 
 export default useForm

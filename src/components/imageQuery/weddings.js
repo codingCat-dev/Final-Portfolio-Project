@@ -25,7 +25,7 @@ const Weddings = () => {
 
   return (
     <>
-      <div className="px-3 md:px-0">
+      <div className="px-2.5 md:px-0 mt-6">
         <Gallery images={images} thumbAlt="wedding images" />
       </div>
     </>
